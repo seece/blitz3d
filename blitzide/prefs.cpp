@@ -10,7 +10,6 @@
 Prefs prefs;
 
 void Prefs::open(){
-
 	char *p=getenv( "blitzpath" );
 	if( !p ){
 		AfxMessageBox( "blitzpath environment variable not found!",MB_TOPMOST|MB_SETFOREGROUND|MB_ICONINFORMATION );

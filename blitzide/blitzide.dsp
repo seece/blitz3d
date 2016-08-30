@@ -101,7 +101,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MT /W3 /GX /O1 /Ob2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Yu"stdafx.h" /FD /c
-# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O1 /D "_WINDOWS" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FD /c
+# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /Zi /Od /D "_WINDOWS" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FD /c
 # SUBTRACT CPP /YX /Yc /Yu
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
@@ -113,8 +113,8 @@ BSC32=bscmake.exe
 LINK32=link.exe
 # ADD BASE LINK32 winmm.lib /nologo /subsystem:windows /machine:I386 /force /out:"..\blitzbasic\bin\ide.exe"
 # SUBTRACT BASE LINK32 /debug /nodefaultlib
-# ADD LINK32 winmm.lib /nologo /subsystem:windows /machine:I386 /force /out:"../_release/bin/ide.exe"
-# SUBTRACT LINK32 /debug /nodefaultlib
+# ADD LINK32 winmm.lib /nologo /subsystem:windows /debug /machine:I386 /force /out:"../_release/bin/ide.exe"
+# SUBTRACT LINK32 /nodefaultlib
 
 !ELSEIF  "$(CFG)" == "blitzide - Win32 Blitz2DRelease"
 
