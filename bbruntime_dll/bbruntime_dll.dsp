@@ -99,7 +99,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MT /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "BBRUNTIME_DLL_EXPORTS" /FA /YX /FD /c
-# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O1 /D "_WINDOWS" /D "_USRDLL" /D "BBRUNTIME_DLL_EXPORTS" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FA /FD /c
+# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O2 /D "_WINDOWS" /D "_USRDLL" /D "BBRUNTIME_DLL_EXPORTS" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FA /FD /c
 # SUBTRACT CPP /YX
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
@@ -110,7 +110,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 wsock32.lib winmm.lib dxguid.lib d3dxof.lib dplayx.lib ddraw.lib dinput.lib dsound.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386 /force /out:"..\blitzbasic\bin\runtime.dll"
-# ADD LINK32 wsock32.lib amstrmid.lib winmm.lib dxguid.lib d3dxof.lib dplayx.lib ddraw.lib dinput.lib dsound.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386 /force /out:"../_release/bin/runtime.dll"
+# ADD LINK32 wsock32.lib amstrmid.lib winmm.lib dxguid.lib d3dxof.lib ddraw.lib dinput.lib dsound.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386 /force /out:"../_release/bin/runtime.dll"
 
 !ELSEIF  "$(CFG)" == "bbruntime_dll - Win32 Blitz2DRelease"
 
@@ -186,7 +186,7 @@ SOURCE=..\..\FreeImage241\Source\FreeImageLib\Release\FreeImage.lib
 # End Source File
 # Begin Source File
 
-SOURCE=..\..\fmodapi375win\api\lib\fmodvc.lib
+SOURCE=..\..\fmodapi360win32\api\lib\fmodvc.lib
 # End Source File
 # End Target
 # End Project

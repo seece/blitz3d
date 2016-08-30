@@ -216,7 +216,8 @@ gxSound *gxAudio::loadSound( const string &f,bool use3d ){
 
 	int flags=FSOUND_NORMAL | (use3d ? FSOUND_FORCEMONO : FSOUND_2D);
 
-	FSOUND_SAMPLE *sample=FSOUND_Sample_Load( FSOUND_FREE,f.c_str(),flags,0,0 );
+	//FSOUND_SAMPLE *sample=FSOUND_Sample_Load( FSOUND_FREE,f.c_str(),flags,0,0 );
+	FSOUND_SAMPLE *sample=FSOUND_Sample_Load( FSOUND_FREE,f.c_str(),flags,0);
 	if( !sample ) return 0;
 
 	gxSound *sound=d_new gxSound( this,sample );
@@ -240,14 +241,14 @@ void gxAudio::setVolume( float volume ){
 }
 
 void gxAudio::set3dOptions( float roll,float dopp,float dist ){
-	FSOUND_3D_SetRolloffFactor( roll );
-	FSOUND_3D_SetDopplerFactor( dopp );
-	FSOUND_3D_SetDistanceFactor( dist );
+	FSOUND_3D_Listener_SetRolloffFactor( roll );
+	FSOUND_3D_Listener_SetDopplerFactor( dopp );
+	FSOUND_3D_Listener_SetDistanceFactor( dist );
 }
 
 void gxAudio::set3dListener( const float pos[3],const float vel[3],const float forward[3],const float up[3] ){
 	FSOUND_3D_Listener_SetAttributes( (float*)pos,(float*)vel,forward[0],forward[1],forward[2],up[0],up[1],up[2] );
-	FSOUND_Update();
+	//FSOUND_Update();
 }
 
 gxChannel *gxAudio::playFile( const string &t,bool use_3d ){
@@ -266,7 +267,7 @@ gxChannel *gxAudio::playFile( const string &t,bool use_3d ){
 		f.find( ".ogg" )!=string::npos ||
 		f.find( ".wma" )!=string::npos ||
 		f.find( ".asf" )!=string::npos ){
-		FSOUND_STREAM *stream=FSOUND_Stream_Open( f.c_str(),use_3d,0,0 );
+		FSOUND_STREAM *stream=FSOUND_Stream_OpenFile( f.c_str(),use_3d,0);
 		if( !stream ) return 0;
 		chan=d_new StreamChannel( stream );
 	}else{

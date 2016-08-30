@@ -60,6 +60,8 @@ http://www.blitzbasic.com/Community/post.php?topic=102907&post=1235490
 * The MSVC 6.0 editor is in Microsoft Visual Studio\Common\MSDev98\Bin\MSDEV.EXE
 * Had to add AMSTRMID.LIB to bbruntime_dll project libraries.
 * How to generate PDB debug info: https://blogs.msdn.microsoft.com/rickrain/2004/11/05/visual-c-6-0-how-do-i-create-symbols-files-pdb-for-release-builds/
+* Optimization settings have been changed to "Optimize for speed".
+
 
 Directory layout should be the following:
 

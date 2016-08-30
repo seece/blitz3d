@@ -90,7 +90,7 @@ LIB32=link.exe -lib
 # PROP Intermediate_Dir "linker___Win32_Blitz3DRelease"
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MT /W3 /GX /O2 /Ob2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Yu"std.h" /FD /c
-# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O1 /D "_LIB" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FD /c
+# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O2 /D "_LIB" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FD /c
 # SUBTRACT CPP /YX /Yc /Yu
 # ADD BASE RSC /l 0x409 /d "NDEBUG"
 # ADD RSC /l 0x409 /d "NDEBUG"

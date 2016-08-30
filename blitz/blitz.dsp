@@ -92,7 +92,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MT /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
-# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O1 /D "_CONSOLE" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FD /c
+# ADD CPP /nologo /G6 /Gz /MT /W3 /GX /O2 /D "_CONSOLE" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "PRO" /FD /c
 # SUBTRACT CPP /YX
 # ADD BASE RSC /l 0x1409 /d "NDEBUG"
 # ADD RSC /l 0x1409 /d "NDEBUG"
