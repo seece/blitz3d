@@ -61,11 +61,11 @@ http://www.blitzbasic.com/Community/post.php?topic=102907&post=1235490
 * Had to add AMSTRMID.LIB to bbruntime_dll project libraries.
 * How to generate PDB debug info: https://blogs.msdn.microsoft.com/rickrain/2004/11/05/visual-c-6-0-how-do-i-create-symbols-files-pdb-for-release-builds/
 * Optimization settings have been changed to "Optimize for speed".
-
+* FMOD library downgraded to 3.6. You need to find the package somewhere.
 
 Directory layout should be the following:
 
-	fmodapi375win/
+	fmodapi360win32/
 	freeimage241/
 	blitz3d/
 		blitz3d.dsw
